@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "1",
+    "name": "岐阜城",
+    "description": "A historic castle on Mount Kinka. It is famous as a place related to Oda Nobunaga and offers a panoramic view of Gifu city.",
+    "image": "1.jpg",
+    "rating": 5,
+
+    "categories": [
+      "history",
+      "view",
+      "photography"
+    ],
+
+    "location": {
+      "latitude": 35.4339,
+      "longitude": 136.7818
+    },
+
+    "stay_time_minutes": 90,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Park History Museum Mae",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": true,
+      "has_stairs": true,
+      "difficulty_level": "medium"
+    },
+
+    "accessibility": {
+      "barrier_free": "partial",
+      "wheelchair_access": "partial",
+      "baby_stroller_access": "limited"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "adult",
+      "elementary_school_children",
+      "couples"
+    ],
+
+    "recommended_purposes": [
+      "historical_sightseeing",
+      "viewing",
+      "photography"
+    ],
+
+    "travel_type_score": {
+      "with_children": 3,
+      "elderly_people": 3,
+      "rainy_day": 1,
+      "food_trip": 1
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn"
+    ],
+
+    "rainy_day_score": 2,
+    "fatigue_level": 3
+  },
+
+
+  {
+    "id": "2",
+    "name": "岐阜公園",
+    "description": "A relaxing park at the foot of Mount Kinka. It is a popular starting point for visiting Gifu Castle.",
+    "image": "2.jpg",
+    "rating": 5,
+
+    "categories": [
+      "nature",
+      "history",
+      "walking"
+    ],
+
+    "location": {
+      "latitude": 35.4326,
+      "longitude": 136.7812
+    },
+
+    "stay_time_minutes": 45,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Park History Museum Mae",
+      "walking_minutes_from_bus_stop": 2,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "relaxation"
+    ],
+
+    "recommended_purposes": [
+      "walking",
+      "nature",
+      "rest"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 2,
+      "food_trip": 2
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn"
+    ],
+
+    "rainy_day_score": 3,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "3",
+    "name": "川原町歴史地区",
+    "description": "A traditional street area with old townhouses, cafes, and local shops near the Nagara River.",
+    "image": "3.jpg",
+    "rating": 5,
+
+    "categories": [
+      "old_town",
+      "food",
+      "shopping",
+      "photography"
+    ],
+
+    "location": {
+      "latitude": 35.4356,
+      "longitude": 136.7765
+    },
+
+    "stay_time_minutes": 120,
+
+    "transportation": {
+      "nearest_bus_stop": "Nagara Bridge",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "food_lovers",
+      "families",
+      "couples"
+    ],
+
+    "recommended_purposes": [
+      "local_food",
+      "shopping",
+      "photography"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 3,
+      "food_trip": 5
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn",
+      "winter"
+    ],
+
+    "rainy_day_score": 3,
+    "fatigue_level": 1
+  },
+  {
+    "id": "4",
+    "name": "長良うかいミュージアム",
+    "description": "A museum introducing the traditional cormorant fishing culture of the Nagara River. Visitors can learn through exhibitions and videos.",
+    "image": "4.jpg",
+    "rating": 4,
+
+    "categories": [
+      "culture",
+      "history",
+      "indoor",
+      "education"
+    ],
+
+    "location": {
+      "latitude": 35.4427,
+      "longitude": 136.7788
+    },
+
+    "stay_time_minutes": 60,
+
+    "transportation": {
+      "nearest_bus_stop": "Ukaiya",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "rainy_day"
+    ],
+
+    "recommended_purposes": [
+      "learning",
+      "culture",
+      "indoor_activity"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 5,
+      "food_trip": 2
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "summer",
+      "autumn"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "5",
+    "name": "岐阜市科学館",
+    "description": "An interactive science museum where children can enjoy experiments and learn about science.",
+    "image": "5.jpg",
+    "rating": 4,
+
+    "categories": [
+      "children",
+      "education",
+      "indoor"
+    ],
+
+    "location": {
+      "latitude": 35.3985,
+      "longitude": 136.7227
+    },
+
+    "stay_time_minutes": 120,
+
+    "transportation": {
+      "nearest_bus_stop": "Kagakukan Mae",
+      "walking_minutes_from_bus_stop": 1,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": false,
+      "nearby_cafe": false
+    },
+
+    "user_tags": [
+      "small_children",
+      "elementary_school_children",
+      "families"
+    ],
+
+    "recommended_purposes": [
+      "education",
+      "playing",
+      "rainy_day_activity"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 3,
+      "rainy_day": 5,
+      "food_trip": 1
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "summer",
+      "winter",
+      "rainy_season"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "6",
+    "name": "岐阜市歴史博物館",
+    "description": "A museum where visitors can learn about the history of Gifu from ancient times to modern days.",
+    "image": "6.jpg",
+    "rating": 4,
+
+    "categories": [
+      "history",
+      "culture",
+      "indoor"
+    ],
+
+    "location": {
+      "latitude": 35.4331,
+      "longitude": 136.7804
+    },
+
+    "stay_time_minutes": 60,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Park History Museum Mae",
+      "walking_minutes_from_bus_stop": 3,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "history_lovers",
+      "families",
+      "elderly"
+    ],
+
+    "recommended_purposes": [
+      "learning",
+      "history",
+      "indoor_activity"
+    ],
+
+    "travel_type_score": {
+      "with_children": 4,
+      "elderly_people": 5,
+      "rainy_day": 5,
+      "food_trip": 2
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "7",
+    "name": "岐阜シティ・タワー43",
+    "description": "A high-rise observation facility offering a panoramic view of Gifu city and surrounding mountains.",
+    "image": "7.jpg",
+    "rating": 4,
+
+    "categories": [
+      "view",
+      "photography",
+      "city"
+    ],
+
+    "location": {
+      "latitude": 35.4108,
+      "longitude": 136.7562
+    },
+
+    "stay_time_minutes": 45,
+
+    "transportation": {
+      "nearest_bus_stop": "JR Gifu Station",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "couples",
+      "elderly",
+      "photography"
+    ],
+
+    "recommended_purposes": [
+      "night_view",
+      "photography",
+      "relaxation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 4,
+      "elderly_people": 5,
+      "rainy_day": 3,
+      "food_trip": 4
+    },
+
+    "recommended_time": "evening",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 3,
+    "fatigue_level": 1
+  },
+
+  {
+    "id": "8",
+    "name": "梅林公園",
+    "description": "A famous plum blossom park in Gifu with beautiful seasonal scenery and walking paths.",
+    "image": "8.jpg",
+    "rating": 4,
+
+    "categories": [
+      "nature",
+      "walking",
+      "photography"
+    ],
+
+    "location": {
+      "latitude": 35.4235,
+      "longitude": 136.7558
+    },
+
+    "stay_time_minutes": 60,
+
+    "transportation": {
+      "nearest_bus_stop": "Bairin Koen Mae",
+      "walking_minutes_from_bus_stop": 3,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": false,
+      "nearby_cafe": false
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "nature_lovers"
+    ],
+
+    "recommended_purposes": [
+      "walking",
+      "flowers",
+      "photography"
+    ],
+
+    "travel_type_score": {
+      "with_children": 4,
+      "elderly_people": 5,
+      "rainy_day": 1,
+      "food_trip": 1
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring"
+    ],
+
+    "rainy_day_score": 1,
+    "fatigue_level": 1
+  },
+  {
+    "id": "9",
+    "name": "岐阜大仏",
+    "description": "One of the three largest Buddha statues in Japan. Located inside Shobo-ji Temple and known for its impressive wooden structure.",
+    "image": "9.jpg",
+    "rating": 5,
+
+    "categories": [
+      "history",
+      "culture",
+      "religion",
+      "indoor"
+    ],
+
+    "location": {
+      "latitude": 35.4348,
+      "longitude": 136.7785
+    },
+
+    "stay_time_minutes": 45,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Park History Museum Mae",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "partial",
+      "wheelchair_access": "limited",
+      "baby_stroller_access": "limited"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "history_lovers",
+      "elderly",
+      "families"
+    ],
+
+    "recommended_purposes": [
+      "cultural_learning",
+      "history",
+      "quiet_visit"
+    ],
+
+    "travel_type_score": {
+      "with_children": 3,
+      "elderly_people": 5,
+      "rainy_day": 4,
+      "food_trip": 2
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 4,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "10",
+    "name": "瑞龍寺",
+    "description": "A historic temple in Gifu with beautiful gardens and traditional architecture. A peaceful place for sightseeing.",
+    "image": "10.jpg",
+    "rating": 4,
+
+    "categories": [
+      "temple",
+      "history",
+      "culture",
+      "garden"
+    ],
+
+    "location": {
+      "latitude": 35.4258,
+      "longitude": 136.7592
+    },
+
+    "stay_time_minutes": 45,
+
+    "transportation": {
+      "nearest_bus_stop": "Nishigifu Station Area",
+      "walking_minutes_from_bus_stop": 10,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": true,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "partial",
+      "wheelchair_access": "limited",
+      "baby_stroller_access": "limited"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": false,
+      "nearby_cafe": false
+    },
+
+    "user_tags": [
+      "history_lovers",
+      "photography",
+      "elderly"
+    ],
+
+    "recommended_purposes": [
+      "temple_visit",
+      "photography",
+      "relaxation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 3,
+      "elderly_people": 4,
+      "rainy_day": 3,
+      "food_trip": 1
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "quiet",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn"
+    ],
+
+    "rainy_day_score": 3,
+    "fatigue_level": 2
+  },
+
+
+  {
+    "id": "11",
+    "name": "崇福寺",
+    "description": "A temple connected with Oda Nobunaga and the history of Gifu. It features traditional architecture and historical atmosphere.",
+    "image": "11.jpg",
+    "rating": 4,
+
+    "categories": [
+      "history",
+      "temple",
+      "culture"
+    ],
+
+    "location": {
+      "latitude": 35.4375,
+      "longitude": 136.7738
+    },
+
+    "stay_time_minutes": 40,
+
+    "transportation": {
+      "nearest_bus_stop": "Nagara Bridge",
+      "walking_minutes_from_bus_stop": 8,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": true,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "limited",
+      "wheelchair_access": "limited",
+      "baby_stroller_access": "limited"
+    },
+
+    "facilities": {
+      "toilet": false,
+      "locker": false,
+      "rest_area": false,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "history_lovers",
+      "adults",
+      "photography"
+    ],
+
+    "recommended_purposes": [
+      "historical_visit",
+      "culture"
+    ],
+
+    "travel_type_score": {
+      "with_children": 2,
+      "elderly_people": 3,
+      "rainy_day": 2,
+      "food_trip": 2
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "quiet",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn"
+    ],
+
+    "rainy_day_score": 2,
+    "fatigue_level": 2
+  },
+
+
+  {
+    "id": "12",
+    "name": "長良川",
+    "description": "A scenic riverside area where visitors can enjoy walking, river views, and seasonal events.",
+    "image": "12.jpg",
+    "rating": 5,
+
+    "categories": [
+      "nature",
+      "walking",
+      "view",
+      "photography"
+    ],
+
+    "location": {
+      "latitude": 35.4432,
+      "longitude": 136.7795
+    },
+
+    "stay_time_minutes": 90,
+
+    "transportation": {
+      "nearest_bus_stop": "Nagara Bridge",
+      "walking_minutes_from_bus_stop": 2,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "couples",
+      "photography"
+    ],
+
+    "recommended_purposes": [
+      "walking",
+      "nature",
+      "relaxation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 2,
+      "food_trip": 3
+    },
+
+    "recommended_time": "evening",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+
+    "rainy_day_score": 2,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "13",
+    "name": "岐阜金華山ロープウェー",
+    "description": "A ropeway connecting Gifu Park and the summit of Mount Kinka. It provides beautiful views during the ride.",
+    "image": "13.jpg",
+    "rating": 5,
+
+    "categories": [
+      "view",
+      "transport",
+      "family",
+      "photography"
+    ],
+
+    "location": {
+      "latitude": 35.4332,
+      "longitude": 136.7819
+    },
+
+    "stay_time_minutes": 30,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Park History Museum Mae",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": true,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "children",
+      "elderly"
+    ],
+
+    "recommended_purposes": [
+      "scenery",
+      "experience",
+      "transportation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 2,
+      "food_trip": 2
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+
+    "rainy_day_score": 2,
+    "fatigue_level": 1
+  },
+  {
+    "id": "14",
+    "name": "岐阜メモリアルセンター",
+    "description": "A large sports and recreation facility with open spaces, walking areas, and places for families to relax.",
+    "image": "14.jpg",
+    "rating": 4,
+
+    "categories": [
+      "park",
+      "family",
+      "sports",
+      "relaxation"
+    ],
+
+    "location": {
+      "latitude": 35.4465,
+      "longitude": 136.7568
+    },
+
+    "stay_time_minutes": 90,
+
+    "transportation": {
+      "nearest_bus_stop": "Gifu Memorial Center Mae",
+      "walking_minutes_from_bus_stop": 3,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "small_children",
+      "elderly"
+    ],
+
+    "recommended_purposes": [
+      "playing",
+      "walking",
+      "relaxation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 3,
+      "food_trip": 2
+    },
+
+    "recommended_time": "morning",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "autumn",
+      "summer"
+    ],
+
+    "rainy_day_score": 3,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "15",
+    "name": "オリベストリート",
+    "description": "A shopping and cultural street area with local stores, cafes, and traditional atmosphere.",
+    "image": "15.jpg",
+    "rating": 4,
+
+    "categories": [
+      "shopping",
+      "food",
+      "walking",
+      "culture"
+    ],
+
+    "location": {
+      "latitude": 35.4112,
+      "longitude": 136.7585
+    },
+
+    "stay_time_minutes": 90,
+
+    "transportation": {
+      "nearest_bus_stop": "Meitetsu Gifu Station",
+      "walking_minutes_from_bus_stop": 8,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "food_lovers",
+      "couples",
+      "families"
+    ],
+
+    "recommended_purposes": [
+      "shopping",
+      "local_food",
+      "walking"
+    ],
+
+    "travel_type_score": {
+      "with_children": 4,
+      "elderly_people": 5,
+      "rainy_day": 4,
+      "food_trip": 5
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 4,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "16",
+    "name": "名鉄岐阜駅周辺",
+    "description": "A convenient city area with restaurants, shopping facilities, and easy transportation access.",
+    "image": "16.jpg",
+    "rating": 4,
+
+    "categories": [
+      "shopping",
+      "food",
+      "transport"
+    ],
+
+    "location": {
+      "latitude": 35.4097,
+      "longitude": 136.7606
+    },
+
+    "stay_time_minutes": 120,
+
+    "transportation": {
+      "nearest_bus_stop": "Meitetsu Gifu Station",
+      "walking_minutes_from_bus_stop": 0,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "excellent",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "food_lovers"
+    ],
+
+    "recommended_purposes": [
+      "shopping",
+      "meal",
+      "rest"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 5,
+      "food_trip": 5
+    },
+
+    "recommended_time": "evening",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "17",
+    "name": "清水緑地公園",
+    "description": "A local park suitable for families with open spaces and relaxing walking paths.",
+    "image": "17.jpg",
+    "rating": 3,
+
+    "categories": [
+      "park",
+      "family",
+      "relaxation"
+    ],
+
+    "location": {
+      "latitude": 35.4238,
+      "longitude": 136.7395
+    },
+
+    "stay_time_minutes": 45,
+
+    "transportation": {
+      "nearest_bus_stop": "Shimizu Park Mae",
+      "walking_minutes_from_bus_stop": 3,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": false,
+      "nearby_cafe": false
+    },
+
+    "user_tags": [
+      "small_children",
+      "families",
+      "relaxation"
+    ],
+
+    "recommended_purposes": [
+      "playing",
+      "rest",
+      "short_break"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 4,
+      "rainy_day": 1,
+      "food_trip": 1
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "quiet",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+
+    "rainy_day_score": 1,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "18",
+    "name": "長良公園",
+    "description": "A riverside park where visitors can enjoy nature, walking, and views of the Nagara River.",
+    "image": "18.jpg",
+    "rating": 4,
+
+    "categories": [
+      "nature",
+      "park",
+      "walking",
+      "view"
+    ],
+
+    "location": {
+      "latitude": 35.4418,
+      "longitude": 136.7810
+    },
+
+    "stay_time_minutes": 60,
+
+    "transportation": {
+      "nearest_bus_stop": "Nagara Bridge",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "good",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "families",
+      "elderly",
+      "photography"
+    ],
+
+    "recommended_purposes": [
+      "walking",
+      "nature",
+      "relaxation"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 2,
+      "food_trip": 3
+    },
+
+    "recommended_time": "evening",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+
+    "rainy_day_score": 2,
+    "fatigue_level": 1
+  },
+  {
+    "id": "19",
+    "name": "岐阜市文化センター",
+    "description": "A cultural facility in central Gifu with exhibitions, events, and indoor spaces suitable for rainy days.",
+    "image": "19.jpg",
+    "rating": 4,
+
+    "categories": [
+      "culture",
+      "indoor",
+      "events",
+      "city"
+    ],
+
+    "location": {
+      "latitude": 35.4125,
+      "longitude": 136.7588
+    },
+
+    "stay_time_minutes": 60,
+
+    "transportation": {
+      "nearest_bus_stop": "JR Gifu Station",
+      "walking_minutes_from_bus_stop": 5,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "excellent",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "elderly",
+      "families",
+      "rainy_day"
+    ],
+
+    "recommended_purposes": [
+      "indoor_activity",
+      "culture",
+      "rest"
+    ],
+
+    "travel_type_score": {
+      "with_children": 4,
+      "elderly_people": 5,
+      "rainy_day": 5,
+      "food_trip": 3
+    },
+
+    "recommended_time": "afternoon",
+    "crowd_level": "normal",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  },
+
+
+  {
+    "id": "20",
+    "name": "岐阜駅周辺グルメエリア",
+    "description": "A convenient dining area around Gifu Station with local restaurants, cafes, and souvenir shops.",
+    "image": "20.jpg",
+    "rating": 4,
+
+    "categories": [
+      "food",
+      "shopping",
+      "city",
+      "souvenir"
+    ],
+
+    "location": {
+      "latitude": 35.4100,
+      "longitude": 136.7567
+    },
+
+    "stay_time_minutes": 90,
+
+    "transportation": {
+      "nearest_bus_stop": "JR Gifu Station",
+      "walking_minutes_from_bus_stop": 1,
+      "parking_available": true,
+      "parking_capacity": null
+    },
+
+    "walking_information": {
+      "walking_suitable": true,
+      "has_slope": false,
+      "has_stairs": false,
+      "difficulty_level": "easy"
+    },
+
+    "accessibility": {
+      "barrier_free": "excellent",
+      "wheelchair_access": "available",
+      "baby_stroller_access": "available"
+    },
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "rest_area": true,
+      "nearby_restaurants": true,
+      "nearby_cafe": true
+    },
+
+    "user_tags": [
+      "food_lovers",
+      "families",
+      "elderly",
+      "tourists"
+    ],
+
+    "recommended_purposes": [
+      "local_food",
+      "shopping",
+      "souvenir"
+    ],
+
+    "travel_type_score": {
+      "with_children": 5,
+      "elderly_people": 5,
+      "rainy_day": 5,
+      "food_trip": 5
+    },
+
+    "recommended_time": "evening",
+    "crowd_level": "busy",
+    "reservation_required": false,
+
+    "recommended_seasons": [
+      "all_year"
+    ],
+
+    "rainy_day_score": 5,
+    "fatigue_level": 1
+  }
+]
