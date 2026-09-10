@@ -1,13 +1,517 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-todo</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html>
+<head>
+  <title>地元観光案内</title>
+  <link rel="stylesheet" href="評価課題.css">
+  <!-- jQueryUIを読み込む(CSS+jquery+jqueryUI) -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="menu">
+    <button id="menuToggle">
+      ☰
+    </button>
+    <div id="menuItems">
+      <button id="routeMenu">
+        🗺️ 観光ルート
+      </button>
+      <button id="rankingMenu">
+        ⭐ ランキング
+      </button>
+    </div>
+  </div>
+  <!-- 観光ルート -->
+  <div id="routeSearch">
+    <h2>観光ルート作成</h2>
+    <label>
+      誰と行きますか？
+    </label>
+    <select id="userType">
+      <option value="families">家族</option>
+      <option value="couples">カップル</option>
+      <option value="elderly">高齢者</option>
+      <option value="small_children">子供連れ</option>
+    </select>
+
+    <label>
+      移動手段
+    </label>
+    <select id="transport">
+      <option value="bus">バス</option>
+      <option value="car">車</option>
+      <option value="walk">徒歩</option>
+    </select>
+
+    <label>
+      所要時間
+    </label>
+    <select id="time">
+      <option value="120">2時間</option>
+      <option value="240">半日</option>
+      <option value="480">1日</option>
+    </select>
+
+    <label>
+      目的
+    </label>
+    <select id="purpose">
+      <option value="history">歴史</option>
+      <option value="viewing">景色</option>
+      <option value="local_food">グルメ</option>
+      <option value="photography">写真撮影</option>
+      <option value="walking">散策</option>
+    </select>
+    <hr>
+    <h3>こだわり</h3>
+    <label>
+      <input type="checkbox" id="rest">
+      休憩場所あり
+    </label>
+    <label>
+      <input type="checkbox" id="toilet">
+      トイレあり
+    </label>
+    <label>
+      <input type="checkbox" id="easyWalk">
+      徒歩少なめ
+    </label>
+    <label>
+      <input type="checkbox" id="rain">
+      雨の日対応
+    </label>
+    <button onclick="createRoute()">
+      ルート作成
+    </button>
+  </div>
+  <!-- ルート結果表示 -->
+  <div id="routeResult">
+    <h2>おすすめの観光地</h2>
+    <div id="resultList"></div>
+  </div>
+  <div id="searchbox">
+    <input type="text" id="search" /><button onclick="search()">検索</button>
+  </div>
+  <div id="sidebar"></div>
+  <script>
+    // 情報ウィンドウ表示内容作成関数
+    function infowindowcontent(id,name,img,markertext){
+      const infowindowcontent=
+      `<div class="infowindow">
+        <div class="info-header">
+          <img src="${img}" alt="画像">
+          <div>
+            <div class="info-title">
+              ${name}
+            </div>
+            <p>${markertext}</p>
+          </div>
+        </div>
+        <div class="info-buttons">
+          <button onclick="opensidebar(${id})">
+            🔖<br>
+            詳細
+          </button>
+          <button onclick="
+            navigator.share({
+              title:'${name}',
+              text:'${markertext}',
+              url:location.href
+            })
+          ">
+            ↗️<br>
+            共有
+          </button>
+        </div>
+      </div>`
+      return infowindowcontent
+    }
+
+    // グローバル変数
+    const sidebar = $("#sidebar");
+    let map;
+    let markers=[];
+    let infoWindow;
+
+    // 検索時
+    function createRoute(){
+      const routeData = {
+        userType: $("#userType").val(),
+        transport: $("#transport").val(),
+        time:Number($("#time").val()),
+        purpose:$("#purpose").val(),
+        conditions:$('input[type="checkbox"]:checked')
+        .map(function(){
+          return this.id;
+        }).get()
+      };
+      routeSearch(routeData);
+    }
+    function routeSearch(routeData){
+      Promise.all([
+      fetch("評価課題.json").then(res=>res.json()),
+      fetch("bus_routes.json").then(res=>res.json()),
+      fetch("bus_stops.json").then(res=>res.json())
+      ])
+      .then(([spots,busRoutes,busStops])=>{
+      // 必須条件の一致
+      let candidates = spots.filter(spot=>{
+        const userMatch = spot.user_tags?.includes(routeData.userType);
+        const purposeMatch = spot.recommended_purposes?.some(p=>
+        p.includes(routeData.purpose))||spot.categories?.includes(routeData.purpose);
+        return userMatch && purposeMatch;
+      });
+      if(candidates.length===0){
+      alert("条件に一致する場所がありません");
+      return;
+      }
+      // こだわりポイント計算
+      candidates = candidates.map(spot=>{
+        let point=0;
+        if(routeData.conditions.includes("toilet")&& spot.facilities.toilet){point+=10;}
+        if(routeData.conditions.includes("rest")&& spot.facilities.rest_area){point+=10;}
+        if(routeData.conditions.includes("easyWalk")&& spot.fatigue_level<=1){point+=10;}
+        if(routeData.conditions.includes("rain")&& spot.rainy_day_score>=4){point+=10;}
+        return {...spot,point};
+      });
+      // 高得点順
+      candidates.sort((a,b)=>b.point-a.point);
+      // バス(1本バス移動想定。バスルートから検索かけてる)
+      if(routeData.transport==="bus"){
+        selectedBusRoute = busRoutes.find(route=>{
+          const userMatch =
+            route.recommended_for.includes(routeData.userType);
+          let purposeMatch=false;
+          if(routeData.purpose==="history"){
+            purposeMatch =
+            route.purpose.some(p =>
+              p.includes("history") ||
+              p.includes("Castle")
+            );
+          }
+          if(routeData.purpose==="local_food"){
+            purposeMatch =
+            route.purpose.some(p =>
+              p.includes("food")
+            );
+          }
+          if(routeData.purpose==="walking"){
+            purposeMatch =
+            route.purpose.some(p =>
+              p.includes("walking") ||
+              p.includes("river")
+            );
+          }
+          if(routeData.purpose==="viewing"){
+            purposeMatch =
+            route.purpose.some(p =>
+              p.includes("sightseeing")
+            );
+          }
+          return userMatch && purposeMatch;
+        });
+      }
+      // 時間
+      let totalTime=0;
+      let result=[];
+      if(routeData.transport==="bus"){
+        if(!selectedBusRoute){return alert("バス停付近には条件に一致する場所がありません");}
+        totalTime += selectedBusRoute.total_time_minutes;
+        const stopIds =selectedBusRoute.stops.map(s=>s.bus_stop_id);
+        const stopPlaces =busStops.filter(stop=>stopIds.includes(stop.bus_stop_id)).flatMap(stop=>stop.nearby_spots);
+        candidates.forEach(place=>{
+          if(stopPlaces.includes(place.id)){
+            if(totalTime + place.stay_time_minutes<= routeData.time){
+              result.push(place);
+              totalTime += place.stay_time_minutes;
+            }}
+        });
+      }else{
+        // 車・徒歩の場合
+        candidates.forEach(place=>{
+          if(totalTime + place.stay_time_minutes<=routeData.time){
+            result.push(place);
+            totalTime+=place.stay_time_minutes;
+          }
+        });
+      }
+      // 表示
+      let resultlist=result.map((place,index)=>`
+        <div style="
+          padding:10px;
+          border-bottom:1px solid #ddd;
+        ">
+          <b>${index+1}. ${place.name}</b><br>
+          この場所の条件一致レベル⭐ ${place.rating}<br>
+          予想滞在時間 ${place.stay_time_minutes}分<br>
+        </div>
+        `).join("");
+      if(routeData.transport==="bus"){
+        resultlist+= `
+        <button id="showRoute">
+          使用するバス停間を線で表示
+        </button>
+        `;
+      }
+      $("#resultList").html(resultlist);
+      $('#showRoute').on("click",function(){drawRouteLine(selectedBusRoute,busStops)})
+      $("#routeResult").show();
+    })}
+
+    //観光ルート検索画面表示
+    $("#routeMenu").click(function () {
+      $("#routeSearch").toggle();
+    });
+
+    // 検索
+    function search() {
+      const text = $('#search').val();
+      fetch("評価課題.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const newdata = data.find((e) => e.name === text);
+          if (!newdata) {
+            alert("場所が見つかりません");
+            return;
+          }
+          sidebar.show();
+          sidebar.html(createsidebarcontents(newdata));
+          $("#tabs").tabs();
+          map.setCenter({
+            lat: newdata.location.latitude,
+            lng: newdata.location.longitude
+          });
+          const markerData = markers.find(e => e.name === text);
+          if(markerData){
+            infoWindow.setContent(infowindowcontent(markerData.id,markerData.name,markerData.img,markerData.markertext));
+            infoWindow.open(map, markerData.marker);
+          }
+        });
+    }
+
+    // メニューバー表示非表示
+    $("#menuToggle").click(function () {
+      $("#menu").toggleClass("open");
+      $("#menuItems").toggle();
+    });
+
+    // sidebarの中身
+    function createsidebarcontents(newdata) {
+      const sidebarcontents = `
+        <div class="sidebar-header">
+          <img
+            src="./img/${newdata.image}"
+            alt="${newdata.name}"
+            class="sidebar-img"
+          >
+          <h1>
+            ${newdata.name}
+          </h1>
+          <div class="rating">
+            ⭐ ${newdata.rating || "評価なし"}
+          </div>
+        </div>
+        <div id="tabs">
+          <ul>
+            <li>
+              <a href="#tab1">
+                詳細情報
+              </a>
+            </li>
+            <li>
+              <a href="#tab2">
+                交通情報
+              </a>
+            </li>
+            <li>
+              <a href="#tab3">
+                バリアフリー
+              </a>
+            </li>
+          </ul>
+          <div id="tab1">
+            <h2>📖 概要</h2>
+            <p>
+              ${newdata.description || "概要情報がありません"}
+            </p>
+            <hr>
+            <h2>🍴 メニュー</h2>
+            <div class="menu">
+              ${newdata.menu || "情報なし"}
+            </div>
+            <hr>
+            <h2>💬 口コミ</h2>
+            <div class="reviews">
+              ${newdata.review || "口コミはありません"}
+            </div>
+          </div>
+          <div id="tab2">
+            <h2>交通情報</h2>
+            <div>
+              🚌 最寄りのバス停：
+              <strong>
+                ${newdata.transportation.nearest_bus_stop || "情報が見つかりません"}
+              </strong>
+            </div>
+            <div>
+              🚶 バス停からの徒歩：
+              <strong>
+                ${newdata.transportation.walking_minutes_from_bus_stop || "情報が見つかりません"}分
+              </strong>
+            </div>
+            <div>
+              🚗 駐車場：
+              <strong>
+                ${newdata.parking_available || "なし"}
+              </strong>
+            </div>
+            <div>
+              🅿️ 駐車可能台数：
+              <strong>
+                ${newdata.parking_capacity || "情報なし"}
+              </strong>
+            </div>
+          </div>
+          <div id="tab3">
+            <h2>バリアフリー情報</h2>
+            <div>
+              ♿ アクセシビリティ：
+              <strong>
+                ${newdata.accessibility.barrier_free || "情報が見つかりません"}
+              </strong>
+            </div>
+            <div>
+              🦽 車いす：
+              <strong>
+                ${newdata.accessibility.wheelchair_access || "推奨されません"}
+              </strong>
+            </div>
+            <div>
+              👶 ベビーカー：
+              <strong>
+                ${newdata.accessibility.baby_stroller_access || "推奨されません"}
+              </strong>
+            </div>
+            <hr>
+            <h2>⏰ 滞在時間</h2>
+            <div>
+              ${newdata.stay_time_minutes || "情報が見つかりません"} 分
+            </div>
+          </div>
+        </div>
+      `;
+      return sidebarcontents;
+    }
+    // sidebar表示
+    function opensidebar(id) {
+      fetch("評価課題.json")
+        .then((res) => res.json())
+        .then((data) => {
+          sidebar.show();
+          const newdata = data.find((e) => e.id === String(id));
+          sidebar.html(createsidebarcontents(newdata));
+          $("#tabs").tabs();
+        });
+    }
+
+    // mapにマーカー配置関数
+    function loadCSV(map) {
+      // mapクリックで情報ウィンドウサイドバー閉じる
+      map.addListener("click", () => {
+        infoWindow.close();
+        sidebar.hide();
+      });
+      fetch("評価課題.csv")
+        .then((res) => res.text())
+        .then((text) => {
+          const rows = text.split("\r\n");
+          rows.forEach(function (line) {
+            const col = line.split(",");
+            const lat = parseFloat(col[1]);
+            const lng = parseFloat(col[2]);
+            const img = "./img/" + col[4];
+            // 読み込んだ座標にマーカーを配置
+            const makemarker = new google.maps.Marker({
+              position: { lat: lat, lng: lng },
+              map: map,
+              title: col[3],
+            });
+            // マーカーとデータを保存
+            markers.push({
+              id: col[0],
+              name: col[3],
+              marker: makemarker,
+              img: img,
+              markertext: col[5]
+            });
+            makemarker.addListener("click", function () {
+              infoWindow.setContent(infowindowcontent(col[0],col[3],img,col[5]));
+              infoWindow.open(map, makemarker);
+            });
+          });
+        });
+    }
+
+    // ルート
+    let routeLine;
+    function drawRouteLine(route, busStops){
+      console.log("route:",route);
+      if(routeLine){
+        routeLine.setMap(null);
+      }
+      // バス停
+      const coords = route.stops.map(stop=>{
+        const data = busStops.find(
+          s=>s.bus_stop_id === stop.bus_stop_id
+        );
+        return {
+          lat:data.location.latitude,
+          lng:data.location.longitude
+        };
+      });
+      routeLine = new google.maps.Polyline({
+        path:coords,
+        strokeColor:"#0000ff",
+        strokeOpacity:1,
+        strokeWeight:5
+      });
+      routeLine.setMap(map);
+    }
+    // マップ
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: { lat: 35.424282603254476, lng: 136.75899240101003 },
+        zoomControl: true,
+        mapTypeControl: true,
+        streetViewControl: false,
+      });
+      sidebar.html("");
+      sidebar.hide();
+      $("#routeResult").hide();
+      infoWindow = new google.maps.InfoWindow({
+        content: ""
+      });
+      $("#menuItems").hide();
+      loadCSV(map);
+      // jqueryUI検索候補
+      fetch("評価課題.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const names = data.map(e => e.name);
+          $("#search").autocomplete({
+            source: names
+          });
+          const test = data
+        });
+    }
+    // マップの初期化を待つ
+    window.initMap = initMap;
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAKLjisxFelKwIl1_G6MiEO9-ya7Twr5s&libraries=places&callback=initMap"></script>
+</body>
+
 </html>
