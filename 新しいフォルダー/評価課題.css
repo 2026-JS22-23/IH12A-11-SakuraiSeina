@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 情報ウィンドウ */
+.infowindow {
+    width: 280px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.info-buttons button {
+    border: none;
+    background: white;
+    color: #1a73e8;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.info-buttons button:hover {
+    background: #f1f3f4;
+    border-radius: 5px;
+}
+
+/* 検索ボックス */
+#searchbox {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 420px;
+    height: 40px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* 入力欄 */
+#searchbox input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 50px;
+    font-size: 16px;
+}
+
+/* 検索ボタン */
+#searchbox button {
+    width: 90px;
+    height: 100%;
+
+    border: none;
+    background: #4285f4;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* ホバー */
+#searchbox button:hover {
+    background: #3367d6;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    #searchbox {
+        width: 90vw;
+        height: 45px;
+    }
+
+    #searchbox button {
+        width: 70px;
+        font-size: 14px;
+    }
+}
+
+/* 検索ボックスUI */
+.ui-autocomplete {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    width: 300px;
+}
+
+.ui-menu-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ui-menu-item:hover {
+    background: #eee;
+}
+
+/* =========================
+    サイドバー
+========================= */
+#sidebar {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #ffffff !important;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.18);
+    color: #333;
+    font-family: Arial, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #cfd8e3 transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30vw;
+    height: 100vh;
+    z-index: 1500;
+}
+
+/* スクロールバー */
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #cfd8e3;
+    border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* =========================
+    サイドバー ヘッダー
+========================= */
+.sidebar-header {
+    background: #fff;
+}
+
+.sidebar-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-header h1 {
+    padding: 18px 20px 5px;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #222;
+}
+
+.rating {
+    padding: 0 20px 18px;
+    color: #f4b400;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* =========================
+    タブ
+========================= */
+#tabs {
+    border: none;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+/* タブの見出し部分 */
+#tabs>ul {
+    display: flex;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+/* 各タブ */
+#tabs>ul>li {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: #fff;
+    list-style: none;
+}
+
+/* タブのリンク */
+#tabs>ul>li>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 8px 5px;
+
+    color: #666;
+    background: #fff;
+
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+/* ホバー */
+#tabs>ul>li>a:hover {
+    color: #4285f4;
+    background: #f5f9ff;
+}
+
+/* 選択中のタブ */
+#tabs>ul>li.ui-tabs-active>a {
+    color: #4285f4;
+    font-weight: bold;
+    background: #fff;
+}
+
+/* 選択中の青い線 */
+#tabs>ul>li.ui-tabs-active {
+    border: none;
+    border-bottom: 3px solid #4285f4;
+}
+
+/* =========================
+    タブの中身
+========================= */
+#tabs>div {
+    border: none;
+    padding: 22px 20px;
+    background: #fff;
+}
+
+#tabs h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#tabs p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#tabs hr {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 22px 0;
+}
+
+/* メニュー・口コミ */
+#tabs .menu,
+#tabs .reviews {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+    交通情報
+========================= */
+
+#tab2>div {
+    padding: 13px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#tab2>div:last-child {
+    border-bottom: none;
+}
+
+/* 先頭にアイコンっぽい余白 */
+#tab2>div::first-letter {
+    color: #4285f4;
+}
+
+
+/* =========================
+    バリアフリー
+========================= */
+
+#tab3>div {
+    padding: 13px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#tab3>div:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================
+    閉じるボタン
+========================= */
+
+.sidebar-footer {
+    padding: 10px 20px 25px;
+    text-align: center;
+}
+
+.sidebar-footer button {
+    width: 100%;
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #4285f4;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar-footer button:hover {
+    background: #3367d6;
+    box-shadow: 0 3px 8px rgba(66, 133, 244, 0.3);
+}
+
+
+/* =========================
+    サイドバー スマホ対応
+========================= */
+
+@media (max-width: 600px) {
+
+    #sidebar {
+        width: 88vw !important;
+    }
+
+    .sidebar-img {
+        height: 180px;
+    }
+
+    .sidebar-header h1 {
+        font-size: 21px;
+    }
+
+    #tabs>ul>li>a {
+        font-size: 11px;
+        padding: 7px 3px;
+    }
+
+    #tabs>div {
+        padding: 18px 15px;
+    }
+}
+
+/* メニュー */
+#menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 3200;
+}
+
+#menuToggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: white;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#menuItems {
+    gap: 5px;
+    margin-left: 10px;
+}
+
+#menuItems button {
+    border: none;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#menuItems button:hover {
+    background: #4285f4;
+    color: white;
+}
+
+/* 観光ルート */
+#routeSearch {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 3100;
+    display: none;
+}
+
+#routeSearch label {
+    display: block;
+    margin-top: 10px;
+}
+
+#routeSearch select {
+    width: 100%;
+    padding: 8px;
+}
+
+#createRoute {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #4285f4;
+    color: white;
+}
+
+/* 新追加 */
+#routeResult {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+}

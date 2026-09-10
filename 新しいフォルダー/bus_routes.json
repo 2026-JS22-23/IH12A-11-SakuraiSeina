@@ -1,0 +1,204 @@
+[
+  {
+    "route_id": "R001",
+    "route_name": "岐阜駅から岐阜公園",
+    "transport_type": "bus",
+
+    "purpose": [
+      "Gifu Castle sightseeing",
+      "history sightseeing",
+      "family trip"
+    ],
+
+    "stops": [
+      {
+        "order": 1,
+        "bus_stop_id": "B001",
+        "name": "JR Gifu Station Bus Terminal"
+      },
+      {
+        "order": 2,
+        "bus_stop_id": "B003",
+        "name": "Gifu Park History Museum Mae",
+        "travel_time_from_previous_minutes": 15
+      }
+    ],
+
+    "total_time_minutes": 15,
+
+    "recommended_for": [
+      "first_time_visitors",
+      "families",
+      "elderly"
+    ]
+  },
+
+
+  {
+    "route_id": "R002",
+    "route_name": "Nagara River Sightseeing Route",
+    "transport_type": "bus",
+
+    "purpose": [
+      "river sightseeing",
+      "food",
+      "walking"
+    ],
+
+    "stops": [
+      {
+        "order": 1,
+        "bus_stop_id": "B001",
+        "name": "JR Gifu Station Bus Terminal"
+      },
+      {
+        "order": 2,
+        "bus_stop_id": "B004",
+        "name": "Nagara Bridge",
+        "travel_time_from_previous_minutes": 20
+      },
+      {
+        "order": 3,
+        "bus_stop_id": "B005",
+        "name": "Ukaiya",
+        "travel_time_from_previous_minutes": 5
+      }
+    ],
+
+    "total_time_minutes": 25,
+
+    "recommended_for": [
+      "food_lovers",
+      "couples",
+      "families"
+    ]
+  },
+
+
+  {
+    "route_id": "R003",
+    "route_name": "Gifu Castle and Nagara Area Loop",
+    "transport_type": "bus",
+
+    "purpose": [
+      "one_day sightseeing",
+      "classic tourist route"
+    ],
+
+    "stops": [
+      {
+        "order": 1,
+        "bus_stop_id": "B001",
+        "name": "JR Gifu Station Bus Terminal"
+      },
+      {
+        "order": 2,
+        "bus_stop_id": "B003",
+        "name": "Gifu Park History Museum Mae",
+        "travel_time_from_previous_minutes": 15
+      },
+      {
+        "order": 3,
+        "bus_stop_id": "B004",
+        "name": "Nagara Bridge",
+        "travel_time_from_previous_minutes": 10
+      },
+      {
+        "order": 4,
+        "bus_stop_id": "B005",
+        "name": "Ukaiya",
+        "travel_time_from_previous_minutes": 5
+      }
+    ],
+
+    "total_time_minutes": 30,
+
+    "recommended_for": [
+      "tourists",
+      "families",
+      "elderly"
+    ]
+  },
+
+
+  {
+    "route_id": "R004",
+    "route_name": "Family Rainy Day Route",
+    "transport_type": "bus",
+
+    "purpose": [
+      "children",
+      "rainy_day",
+      "indoor_activity"
+    ],
+
+    "stops": [
+      {
+        "order": 1,
+        "bus_stop_id": "B001",
+        "name": "JR Gifu Station Bus Terminal"
+      },
+      {
+        "order": 2,
+        "bus_stop_id": "B007",
+        "name": "Gifu Science Museum Mae",
+        "travel_time_from_previous_minutes": 20
+      },
+      {
+        "order": 3,
+        "bus_stop_id": "B009",
+        "name": "Culture Center Mae",
+        "travel_time_from_previous_minutes": 20
+      }
+    ],
+
+    "total_time_minutes": 40,
+
+    "recommended_for": [
+      "families_with_children",
+      "rainy_weather",
+      "low_fatigue_trip"
+    ]
+  },
+
+
+  {
+    "route_id": "R005",
+    "route_name": "City Food and Shopping Route",
+    "transport_type": "bus",
+
+    "purpose": [
+      "food",
+      "shopping",
+      "souvenir"
+    ],
+
+    "stops": [
+      {
+        "order": 1,
+        "bus_stop_id": "B001",
+        "name": "JR Gifu Station Bus Terminal"
+      },
+      {
+        "order": 2,
+        "bus_stop_id": "B002",
+        "name": "Meitetsu Gifu Station",
+        "travel_time_from_previous_minutes": 5
+      },
+      {
+        "order": 3,
+        "bus_stop_id": "B009",
+        "name": "Culture Center Mae",
+        "travel_time_from_previous_minutes": 10
+      }
+    ],
+
+    "total_time_minutes": 15,
+
+    "recommended_for": [
+      "food_lovers",
+      "short_trip",
+      "rainy_day"
+    ]
+  }
+]

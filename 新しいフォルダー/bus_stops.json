@@ -1,0 +1,269 @@
+[
+  {
+    "bus_stop_id": "B001",
+    "name": "JR Gifu Station Bus Terminal",
+    "location": {
+      "latitude": 35.4100,
+      "longitude": 136.7567
+    },
+    "type": "major_terminal",
+
+    "served_routes": [
+      "City Bus",
+      "Nagaragawa Area Bus",
+      "Gifu Park Area Bus"
+    ],
+
+    "nearby_spots": [
+      "7",
+      "16",
+      "19",
+      "20"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B002",
+    "name": "Meitetsu Gifu Station",
+    "location": {
+      "latitude": 35.4097,
+      "longitude": 136.7606
+    },
+    "type": "major_terminal",
+
+    "served_routes": [
+      "City Bus",
+      "Local Bus"
+    ],
+
+    "nearby_spots": [
+      "16",
+      "20"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B003",
+    "name": "Gifu Park History Museum Mae",
+    "location": {
+      "latitude": 35.4328,
+      "longitude": 136.7810
+    },
+    "type": "tourism_stop",
+
+    "served_routes": [
+      "Gifu Park Route",
+      "City Bus"
+    ],
+
+    "nearby_spots": [
+      "1",
+      "2",
+      "6",
+      "9",
+      "13"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B004",
+    "name": "Nagara Bridge",
+    "location": {
+      "latitude": 35.4370,
+      "longitude": 136.7785
+    },
+    "type": "tourism_stop",
+
+    "served_routes": [
+      "Nagara River Route"
+    ],
+
+    "nearby_spots": [
+      "3",
+      "11",
+      "12",
+      "18"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B005",
+    "name": "Ukaiya",
+    "location": {
+      "latitude": 35.4427,
+      "longitude": 136.7788
+    },
+    "type": "tourism_stop",
+
+    "served_routes": [
+      "Nagara River Route"
+    ],
+
+    "nearby_spots": [
+      "4",
+      "12",
+      "18"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B006",
+    "name": "Gifu Memorial Center Mae",
+    "location": {
+      "latitude": 35.4465,
+      "longitude": 136.7568
+    },
+    "type": "family_stop",
+
+    "served_routes": [
+      "City Bus"
+    ],
+
+    "nearby_spots": [
+      "14"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B007",
+    "name": "Gifu Science Museum Mae",
+    "location": {
+      "latitude": 35.3985,
+      "longitude": 136.7227
+    },
+    "type": "family_stop",
+
+    "served_routes": [
+      "City Bus"
+    ],
+
+    "nearby_spots": [
+      "5"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "bench": true,
+      "restaurant_nearby": false,
+      "cafe_nearby": false,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B008",
+    "name": "Bairin Park Mae",
+    "location": {
+      "latitude": 35.4235,
+      "longitude": 136.7558
+    },
+    "type": "park_stop",
+
+    "served_routes": [
+      "City Bus"
+    ],
+
+    "nearby_spots": [
+      "8"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": false,
+      "bench": true,
+      "restaurant_nearby": false,
+      "cafe_nearby": false,
+      "barrier_free": true
+    }
+  },
+
+
+  {
+    "bus_stop_id": "B009",
+    "name": "Culture Center Mae",
+    "location": {
+      "latitude": 35.4125,
+      "longitude": 136.7588
+    },
+    "type": "city_stop",
+
+    "served_routes": [
+      "City Bus"
+    ],
+
+    "nearby_spots": [
+      "19"
+    ],
+
+    "facilities": {
+      "toilet": true,
+      "locker": true,
+      "bench": true,
+      "restaurant_nearby": true,
+      "cafe_nearby": true,
+      "barrier_free": true
+    }
+  }
+]
