@@ -426,7 +426,7 @@
       fetch("評価課題.csv")
         .then((res) => res.text())
         .then((text) => {
-          const rows = text.split("\r\n");
+          const rows = text.split("__");
           rows.forEach(function (line) {
             const col = line.split(",");
             const lat = parseFloat(col[1]);
